@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: hello
-          image: DOCKER-HUB-USERNAME/hello:latest
+          image: rococoshka/hello:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 5000
