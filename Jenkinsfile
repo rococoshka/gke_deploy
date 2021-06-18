@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        PROJECT_ID = 'ethereal-art-313711 '
+        PROJECT_ID = 'ethereal-art-313711'
         LOCATION = 'europe-central2-a'
         CREDENTIALS_ID = 'gke'
         CLUSTER_NAME_TEST = 'stage'
