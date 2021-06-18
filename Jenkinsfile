@@ -5,7 +5,8 @@ pipeline {
         LOCATION = 'europe-central2-a'
         CREDENTIALS_ID = 'gke'
         CLUSTER_NAME_TEST = 'stage'
-        CLUSTER_NAME_PROD = 'prod'          
+        CLUSTER_NAME_PROD = 'prod'
+	DOCKER_HUB_USERNAME = 'rococoshka'          
     }
     stages {
         stage("Checkout code") {
@@ -16,7 +17,7 @@ pipeline {
         stage("Build image") {
             steps {
                 script {
-                    myapp = docker.build("DOCKER-HUB-USERNAME/hello:${env.BUILD_ID}")
+                    myapp = docker.build("${env.DOCKER_HUB_USERNAME}/hello:${env.BUILD_ID}")
                 }
             }
         }
